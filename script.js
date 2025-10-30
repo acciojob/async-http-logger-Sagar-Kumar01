@@ -1,5 +1,6 @@
 //your JS code here. If required.
-let data = await fetch("https://jsonplaceholder.typicode.com/todos/1")
-let dataobj = await data.json();
-console.log(dataobj);
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+.then(data => data.json())
+.then(dataobj => console.log(data))
+.catch(()=>{console.log("err")})
 
